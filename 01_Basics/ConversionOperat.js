@@ -26,4 +26,4 @@ console.log(typeof BooleanLoggedin); */
 let Somenumber = 33;
 let stringnumber = String(Somenumber);
 console.log(stringnumber);
-console.log(typeof stringnumber);
+console.log(typeof stringnumber);  
