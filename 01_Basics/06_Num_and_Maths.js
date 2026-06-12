@@ -15,3 +15,6 @@ console.log(Math.floor(4.9)); //lower value - 4
 //Math.min, Math.max(4,6,7,8)*/
 console.log(Math.random())
 console.log((Math.random()*10)+1)
+ let max = 20;
+ let min = 10;
+console.log(Math.random()*  ((max - min) +1))
