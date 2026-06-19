@@ -12,7 +12,7 @@ const JsUser = {
 };
 //console.log(JsUser.email) - This method is valid but not the best method
 //This is a better method:
-console.log(JsUser["email"])
+//console.log(JsUser["email"])
 //This is more valid because if we have "email" not just email as a key in our object, then it is impossible to access it via . method
 const JsUser1 = {
     name: "Asad",
@@ -21,14 +21,28 @@ const JsUser1 = {
     isLoggedIn: false,
     lastLoginDays: ["Monday","Tuesday"],
 };
-console.log(JsUser1["email"]);
+//console.log(JsUser1["email"]);
 //Now let's learn to declare symbols as "keys" in objects
 const email= Symbol("email")
 const JsUser2= {
     name: "Ahmed",
     [email]: "ahmed9@gmail.com",
+    greeting: "",
 };
-console.log(JsUser2[email]);
+const JsUser3= {
+    name: "Ahmed",
+    [email]: "ahmed9@gmail.com",
+    greeting: "",
+};
+//console.log(JsUser2[email]);
 //Object.freeze:
-Object.freeze(JsUser2);
-console.log(JsUser2);
+//Object.freeze(JsUser2);
+// console.log(JsUser2);
+JsUser2.greeting =function(x=JsUser2,name){
+    console.log(`This is ${x} from MWF`);
+}
+console.log(JsUser2.greeting());
+JsUser3.greeting =function(){
+    console.log(`This is ${this.name} from MWF`);
+}
+console.log(JsUser3.greeting());
