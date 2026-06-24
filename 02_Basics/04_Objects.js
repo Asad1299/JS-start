@@ -3,7 +3,7 @@ const tinderUser1 = {}; //Non-Singleton/Literal
 tinderUser.name = "Asad";
 tinderUser.age = 20;
 tinderUser.surname = "Farhan";
-console.log(tinderUser);
+//console.log(tinderUser);
 const JsUser= {
     //name: "Asad",
     fullname: {
@@ -14,7 +14,7 @@ const JsUser= {
     },
     Email: "ulhaqasad4@hotmail.co.pk",
 }
-console.log(JsUser.fullname.userfullname.firstname);
+//console.log(JsUser.fullname.userfullname.firstname);
 
 //Object.assign
 const Obj1 = {1:"a", 2:"b"}
@@ -22,11 +22,11 @@ const Obj1 = {1:"a", 2:"b"}
 const Obj2 = {3:"a",4:"d"}
 
 const Obj3 = Object.assign({},Obj1,Obj2);
-console.log(Obj3);
-console.log(Obj3===Obj1);
+//console.log(Obj3);
+//console.log(Obj3===Obj1); //False btw
 // A more simple way to do it, is again the spread method we learnt
 const Obj4= {...Obj1,...Obj2};
-console.log(Obj4);
+//console.log(Obj4);
 //Pov: Value comes from the database
 //When it comes from database, it usually comes in the form of array of objects
 const Users = [
@@ -46,25 +46,25 @@ const Users = [
         email:"AD@gmail.com"
     },
 ]
-console.log(`Emails are: ${Users[1].email} & ${Users[2].email} \n`);
-console.log(tinderUser);
+// console.log(`Emails are: ${Users[1].email} & ${Users[2].email} \n`);
+// console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
 const UserKeys = Object.keys(tinderUser);
 const UserValues = Object.values(tinderUser);
-console.log(UserKeys);
-console.log(Array.isArray(UserKeys));
+// console.log(UserKeys);
+// console.log(Array.isArray(UserKeys));
 const Userinfo = {...UserKeys,...UserValues};
-console.log(UserKeys)
-console.log(UserValues)
-console.log(Userinfo);
+// console.log(UserKeys)
+// console.log(UserValues)
+// console.log(Userinfo);
 const Obj5 = {1:"a", 2:"b"}
 const Arr1= Object.keys(Obj5);
 const Obj6 = {3:"a",4:"d"}
 const Arr2 = Object.values(Obj5);
 const Arr3 = {...Arr1,...Arr2}
-console.log(Arr3);
+//console.log(Arr3);
 
 // Output: { '0': 'a', '1': 'b' }
 
@@ -112,4 +112,32 @@ Final output:
   '1': 'b'
 }
 */
-console.log(Object.entries(tinderUser)); //Every element of the array is a key-value pair
+// console.log(Object.entries(tinderUser)); //Every element of the array is a key-value pair
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+//Object Destructuring:
+const course= {
+    name: "PDC",
+    CourseInstructor: "Miss Mehroz Khalid",
+}
+const {CourseInstructor} = course //It is the same as const CourseInstructor = course.CourseInstructor
+console.log(CourseInstructor);
+const {CourseInstructor: Instructor} = course //It is the same as const Instructor = course.CourseInstructor
+console.log(Instructor);
+
+//JSON API: (JavaScript Object Notation)
+// {
+//     "name": "Asad",
+//     NOdeId: "00312321@%#5532405&53$%",
+// }
+//We store this into an object and then call each property easily
+//Fetch Method
+//Call the URL using fetch method and you have this data in response
+
+//API in the form of arrays of objects:
+[
+    {},
+    {},
+    {}
+]
+//JSON APIs - We will discuss more about this later
